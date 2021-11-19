@@ -1,0 +1,37 @@
+.lbl {
+    display: inline-block;
+    width: 3.5rem;
+    height: 1.5rem;
+    background-color: #D5D5D5;
+    border-radius: 3rem;
+    cursor: pointer;
+    position: relative;
+    transition: .2s;
+}
+
+.lbl::after {
+    content: '';
+    display: block;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.06rem;
+    left: 0.25rem;
+    transition: .2s;
+    height: 1.35rem;
+}
+
+#switch:checked + .lbl::after {
+    background-color: #142F43;
+    left: 1.84rem;
+}
+
+#switch:checked + .lbl {
+    background: linear-gradient(90deg, #2F86A6, #17D7A0)
+}
+
+#switch {
+    display: none;
+}
